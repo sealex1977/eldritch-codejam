@@ -1,59 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Eldrich Horror</title>
-	<link href="css/normalize.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eldritch Horror Codejam</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="wrapper">
-		<div class="ancients__container">
-			<div class="ancient__card"></div>
-			<div class="ancient__card"></div>
-			<div class="ancient__card"></div>
-			<div class="ancient__card"></div>
-		</div>
-		<div class="level__container">
-			<div class="level__item">Easy</div>
-			<div class="level__item">Normal</div>
-			<div class="level__item">Hard</div>
-		</div>
-		<div class="deck__container">
-			<div class="deck__counter">
-				<div class="stage__container">
-					<div class="stage__number">Stage I</div>
-					<div class="stages first-stage">
-						<div class="stage green"></div>
-						<div class="stage brown"></div>
-						<div class="stage blue"></div>
-					</div>
-				</div>
-				<div class="stage__container">
-					<div class="stage__number">Stage II</div>
-					<div class="stages second-stage">
-						<div class="stage green"></div>
-						<div class="stage brown"></div>
-						<div class="stage blue"></div>
-					</div>
-				</div>
-				<div class="stage__container">
-					<div class="stage__number">Stage III</div>
-					<div class="stages third-stage">
-						<div class="stage green"></div>
-						<div class="stage brown"></div>
-						<div class="stage blue"></div>
-					</div>
-				</div>
-			</div>
-			<div class="deck__wrapper">
-				<div class="deck__stack"></div>
-				<div class="deck__current-card"></div>
-			</div>
-		</div>
-	</div>
-	<script src="js/index.js"></script>
+  <div class="wrapper">
+    <div class="ancients-container">
+      <div class="ancients-card azathoth"></div>
+      <div class="ancients-card cthulthu"></div>
+      <div class="ancients-card logsothoth"></div>
+      <div class="ancients-card shubniggurath"></div>
+    </div>
+    <div class="difficulty-container">
+      <div class="difficulty-level">
+        <span>Easiest</span>
+      </div>
+      <div class="difficulty-level">
+        <span>Easy</span>
+      </div>
+      <div class="difficulty-level">
+        <span>Normal</span>
+      </div>
+      <div class="difficulty-level">
+        <span>Hard</span>
+      </div>
+      <div class="difficulty-level">
+        <span>Hardest</span>
+      </div>
+    </div>
+    <div class="deck-container">
+      <div class="shuffle-container">
+        <div class="shuffle">
+          <span>Shuffle Mythic Decks</span>
+        </div>
+      </div>
+      <div class="stages-container">
+        <div class="stages-number">
+          <div class="stage stage-first">
+            <h5>Stage 1</h5>
+            <div class="tracker">
+              <div class="track track-green">
+                <span class="tracker-text"></span>
+              </div>
+              <div class="track track-brown">
+                <span class="tracker-text"></span>
+              </div>
+              <div class="track track-blue">
+                <span class="tracker-text"></span>
+              </div>
+            </div>
+          </div>
+          <div class="stage stage-second">
+            <h5>Stage 2</h5>
+            <div class="tracker">
+              <div class="track track-green">
+                <span class="tracker-text"></span>
+              </div>
+              <div class="track track-brown">
+                <span class="tracker-text"></span>
+              </div>
+              <div class="track track-blue">
+                <span class="tracker-text"></span>
+              </div>
+            </div>
+          </div>
+          <div class="stage stage-third">
+            <h5>Stage 3</h5>
+            <div class="tracker">
+              <div class="track track-green">
+                <span class="tracker-text"></span>
+              </div>
+              <div class="track track-brown">
+                <span class="tracker-text"></span>
+              </div>
+              <div class="track track-blue">
+                <span class="tracker-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-area">
+          <div class="card-deck"></div>
+          <div class="current-card"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="index.js"></script>
+  <script type="module" src="./data/ancients.js"></script>
+  <script type="module" src="./data/difficulties.js"></script>
+  <script type="module" src="./data/mythicCards/blue/index.js"></script>
+  <script type="module" src="./data/mythicCards/brown/index.js"></script>
+  <script type="module" src="./data/mythicCards/green/index.js"></script>
 </body>
 </html>
