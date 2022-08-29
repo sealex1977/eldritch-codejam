@@ -1,0 +1,265 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  background-image: url('./assets/home.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ancients-container {
+  width: 40%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+  margin: 80px;
+}
+
+.ancients-card {
+  width: 180px;
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.ancients-card:hover {
+  scale: 1.1;
+}
+
+.ancients-card-active {
+  box-shadow: 0 0 4px 4px rgb(4, 9, 110), 0 0 10px 5px rgb(40, 20, 222);
+}
+
+.azathoth {
+  background-image: url('./assets/Ancients/Azathoth.png');
+}
+
+.cthulthu {
+  background-image: url('./assets/Ancients/Cthulthu.png');
+}
+
+.logsothoth {
+  background-image: url('./assets/Ancients/IogSothoth.png');
+}
+
+.shubniggurath {
+  background-image: url('./assets/Ancients/ShubNiggurath.png');
+}
+
+.difficulty-container {
+  width: 20%;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  align-items: center;
+  visibility: hidden;
+}
+
+.difficulty-level,
+.shuffle {
+  width: 150px;
+  padding: 12px 6px;
+  border: 4px solid rgba(40, 20, 222);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.difficulty-level:hover,
+.shuffle:hover {
+  scale: 1.1;
+}
+
+.difficulty-level-active,
+.shuffle:hover {
+  font-size: 20px;
+  font-weight: bold;
+  color: yellow;
+  background-color: rgba(40, 20, 222);
+}
+
+.deck-container {
+  position: relative;
+  width: 40%;
+}
+
+.shuffle-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.shuffle {
+  width: 240px;
+}
+
+.shuffle-active {
+  display: block;
+}
+
+.stages-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px;
+  font-size: 20px;
+  visibility: hidden;
+}
+
+.stages-number {
+  width: 180px;
+  color: yellow;
+  padding: 10px 5px;
+  border-radius: 10px;
+}
+
+.stage {
+  margin-top: 20px;
+}
+
+.stage:first-child {
+  margin-top: 0;
+}
+
+.tracker {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+
+.track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 15%;
+}
+
+.track-green {
+  background-color: green;
+}
+
+.track-brown {
+  background-color: brown;
+}
+
+.track-blue {
+  background-color: blue;
+}
+
+.tracker-text {
+  color: white;
+}
+
+.card-area {
+  display: flex;
+  gap: 20px;
+}
+
+.card-deck,
+.current-card {
+  width: 140px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 3px 3px 3px rgb(15, 15, 15);
+  border-radius: 12px;
+  transition: all 0.5s ease;
+}
+
+.card-deck {
+  cursor: pointer;
+}
+
+.card-deck:active {
+  box-shadow: none;
+}
+
+/* --- ADAPTIVE --- */
+
+@media (max-width: 840px) {
+  .ancients-container {
+    margin: 50px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 720px) {
+
+  .difficulty-container,
+  .deck-container {
+    font-size: 14px;
+  }
+
+  .difficulty-level,
+  .shuffle {
+    width: 120px;
+    padding: 10px 5px;
+  }
+
+  .difficulty-level-active,
+  .shuffle:hover {
+    font-size: 16px;
+  }
+
+  .shuffle {
+    width: 180px;
+  }
+}
